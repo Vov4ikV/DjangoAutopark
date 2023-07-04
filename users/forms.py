@@ -4,8 +4,8 @@ from django import forms
 
 
 class UserRegistrationForm(forms.ModelForm):
-    password = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput)
+    password = forms.CharField(label='Пароль', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Повторите пароль', widget=forms.PasswordInput)
 
     class Meta:
         model = User
@@ -13,7 +13,11 @@ class UserRegistrationForm(forms.ModelForm):
         help_texts = {
             'username': 'Только буквы, цифры и символы @/./+/-/_',
         }
-        
+        verbose_name = {
+            'username': 'login',
+        }
+
+
         error_messages = {
             'username': {
                 'required': 'Это поле обязательно для заполнения',
