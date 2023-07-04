@@ -4,8 +4,8 @@
 <h1>{{title}}</h1>
 
 <form method="post">{% csrf_token %}
-    <p>Are you sure you want to delete?</p>
-    <input type="submit" value="Confirm" />
+    <p>Действительно хотите удалить эту запись?</p>
+    <input type="submit" value="Удалить">
   </form>
 
 {% endblock content %}
